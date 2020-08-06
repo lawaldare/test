@@ -1,0 +1,17 @@
+<p class="route-title">Departments</p>
+
+
+<div class="row mt-2 mb-5">
+  <div class="col-md-8">
+    <input type="text" class="form-control" [(ngModel)]="filterValue">
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-success d-block w-100" type="button" routerLink="/create">Create new department</button>
+  </div>
+</div>
+
+
+
+<div class="d-card">
+  <app-dpt-card *ngFor="let d of filterDepartments" [department]="d"></app-dpt-card>
+</div>

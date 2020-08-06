@@ -1,0 +1,14 @@
+<div class="box d-flex flex-column align-items-center justify-content-between mb-3">
+  <p class="d-name">{{ department.name }}</p>
+  <img src="assets/logo2.jpg" alt="">
+  <div class="dropdown">
+    <a class="btn btn-success dropdown-toggle w-100 mb-3" href="#" role="button" id="dropdownMenuLink"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      open
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" [routerLink]="['/', department.id]">Edit</a>
+      <a class="dropdown-item" href="#">Delete</a>
+    </div>
+  </div>
+</div>

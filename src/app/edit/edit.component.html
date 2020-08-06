@@ -1,0 +1,59 @@
+<div class="card-body mt-5">
+  <form #dForm="ngForm" (ngSubmit)="save(dForm)">
+    <fieldset class="border p-5">
+      <legend class="w-auto">Department Info</legend>
+      <div class="form-group row mb-2">
+        <label for="dname" class="col-md-2 col-form-label">Name</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" [(ngModel)]="dname" id="dname" name="dname">
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="apiKey" class="col-md-2 col-form-label">API Key</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" [(ngModel)]="apiKey" id="apiKey" name="apiKey">
+        </div>
+      </div>
+      <div class="form-group row mb-2 d-flex pr-4">
+        <div class="col-md-12">
+          <button class="btn btn-success float-right" type="button">Add new Field</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="border p-5 mt-5">
+      <legend class="w-auto">Department Contact Person</legend>
+      <div class="form-group row mb-2">
+        <label for="dcpName" class="col-md-2 col-form-label">Name</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" [(ngModel)]="dcpName" id="dcpName" name="dcpName">
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="dcpEmail" class="col-md-2 col-form-label">Email</label>
+        <div class="col-md-8">
+          <input type="email" class="form-control" [(ngModel)]="dcpEmail" id="dcpEmail" name="dcpName">
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <label for="dcpTelephone" class="col-md-2 col-form-label">Telephone</label>
+        <div class="col-md-8">
+          <input type="number" class="form-control" [(ngModel)]="dcpTelephone" id="dcpTelephone" name="dcpTelephone">
+        </div>
+      </div>
+      <div class="form-group row mb-2 d-flex pr-4">
+        <div class="col-md-12">
+          <button class="btn btn-success float-right" type="button">Add new Field</button>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group row mb-2 mt-4 d-flex">
+      <div class="col-md-4">
+        <button class="btn btn-secondary d-block w-100" type="button" routerLink="/">Cancel</button>
+      </div>
+      <div class="col-md-8">
+        <button class="btn btn-success d-block w-100" type="submit">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
